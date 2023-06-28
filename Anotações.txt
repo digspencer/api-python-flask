@@ -1,0 +1,27 @@
+# API é um lugar para disponibilizar recursos e ou funcionalidades.
+# 1. Objetivo - Criar uma API que disponibiliza a consulta, criação, edição e exclusão de livros.
+# 2. URL base -
+# 3. Endpoints -
+# - localhost/livros (GET) # Obter
+# - localhost/livros/id (GET) # Obter por ID
+# - localhost/livros/id (PUT) # Alteração
+# - localhost/livros/id (DELETE) # Exclusão
+# 4. Quais recursos que iremos usar - Livros
+______________________________________________________________
+Para ser RestFul é necessário atender 6 (constraints)
+
+Cliente_server: Separação do cliente e do armazenamento de dados (servidor), dessa forma, poderemos ter uma portabilidade
+do nosso sistema, usando REACT para WEB e React Native para smartphone, por exemplo.
+
+Stateless (SEM ESTADO): Cada requisição que o cliente faz para o servidor, deverá conter todas as informações necessárias
+para o servidor entender e responder (RESPONSE) a requisição (REQUEST). Exemplo: A sessão do usuário deverá ser enviada em todas
+requisições, para saber se aquele usuário está autenticado e apto a usar serviços, e o servidor não pode lembrar que o cliente 
+foi autenticado na requisição anterior, Nos nossos cursos, temos por padrão usar tokens para a comunicação.
+
+Cacheable: As repostas para uma requisição, deverão ser explicitas ao dizer se aquela requisição, pode ou não ser cacheada pelo cliente.
+
+Layered System: (Sistema em camadas) acesso pelo cliente por end point sem a necessidade do entendimento da complexibilidade, de quais 
+passos estão sendo necessário para que o servidor entenda e responda, ou quais outros servidores estão lidando e respondendo.
+
+Code on Demand (opcional): Servidor envia para o cliente rodar algum script 
+
